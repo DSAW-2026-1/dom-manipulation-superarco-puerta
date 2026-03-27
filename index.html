@@ -1,13 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi TODO List</title>
     <link rel="stylesheet" href="./styles/styles.css" />
-    <title>Document</title>
   </head>
   <body>
-    <h1>Mi TODO list</h1>
-    <script src="scripts/script.js"></script>
+    <main class="app">
+      <section class="todo-card">
+        <header class="todo-header">
+          <h1>Mi TODO List</h1>
+          <p>Organiza tus tareas de forma simple.</p>
+        </header>
+
+        <section class="todo-form-section">
+          <form id="todo-form" class="todo-form">
+            <label for="task-input" class="sr-only">Escribe una tarea</label>
+            <input
+              type="text"
+              id="task-input"
+              placeholder="Escribe una nueva tarea..."
+              autocomplete="off"
+            />
+            <button type="submit">Agregar</button>
+          </form>
+        </section>
+
+        <section class="todo-info">
+          <p id="task-counter">Tareas pendientes: 0</p>
+        </section>
+
+        <section class="todo-list-section">
+          <ul id="task-list" class="task-list"></ul>
+        </section>
+      </section>
+    </main>
+
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
